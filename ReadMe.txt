@@ -1,6 +1,6 @@
 #################### Acknowledgement  #################
 
-We adapted and modified the code for this work from the projects of Garg et. al. and Akyurek et. al.
+We adapted and modified the code for this work on ICL for dynamical systems from the projects of Garg et. al. (2022) and Akyurek et. al. (2023), who investigated for non-dynamical systems
 
 #################### Training the Model ###############
 
