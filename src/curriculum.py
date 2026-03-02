@@ -28,7 +28,7 @@ class Curriculum:
         self.y_dim=1
         self.discard=False
         self.discard_mode='AllEM' # 'All' or 'Noise' or 'AllEM
-        self.option=1 # F option 1 for strategy 1 or 3 strategy 2
+        self.option=1 # For Generating F in the linear setting: option 1 for strategy 1 or 3 strategy 2
         self.control=False
         self.Non_Linear=False
         self.non_lin_mode=11;
