@@ -1,6 +1,6 @@
 #################### Acknowledgement  #################
 
-We adapted this code for this work from the projects of Garg et. al. and Akyurek et. al.
+We adapted and modified the code for this work from the projects of Garg et. al. and Akyurek et. al.
 
 #################### Training the Model ###############
 
@@ -16,10 +16,10 @@ State update:
 w_t = tanh(w_{t-1}) + noise + B u_t
 
 Description:
-• Pure elementwise tanh nonlinearity
-• No linear mixing matrix F
-• Strong saturation behavior
-• Linear observation model
+â€¢ Pure elementwise tanh nonlinearity
+â€¢ No linear mixing matrix F
+â€¢ Strong saturation behavior
+â€¢ Linear observation model
 
 non_lin_mode = 2
 
@@ -31,10 +31,10 @@ a ~ Uniform(-p1, p1)
 b ~ Uniform(-p2, p2)
 
 Description:
-• Scaled tanh nonlinearity
-• Adjustable amplitude and slope
-• Random parameters per sequence
-• Linear observation model
+â€¢ Scaled tanh nonlinearity
+â€¢ Adjustable amplitude and slope
+â€¢ Random parameters per sequence
+â€¢ Linear observation model
 
 non_lin_mode = 4
 
@@ -42,9 +42,9 @@ State update:
 w_t = a * sin(b * w_{t-1}) + noise + B u_t
 
 Description:
-• Periodic nonlinear dynamics
-• Random amplitude and frequency
-• Linear observation model
+â€¢ Periodic nonlinear dynamics
+â€¢ Random amplitude and frequency
+â€¢ Linear observation model
 
 non_lin_mode = 5
 
@@ -54,8 +54,8 @@ w_t = a * sin(b * w_{t-1})
 + noise + B u_t
 
 Description:
-• Combination of oscillation and saturation
-• More complex nonlinear behavior
+â€¢ Combination of oscillation and saturation
+â€¢ More complex nonlinear behavior
 
 non_lin_mode = 6
 
@@ -63,9 +63,9 @@ State update:
 w_t = F * tanh(2 w_{t-1}) + noise + B u_t
 
 Description:
-• Linear mixing matrix F
-• Tanh applied before mixing
-• Coupled nonlinear dynamics
+â€¢ Linear mixing matrix F
+â€¢ Tanh applied before mixing
+â€¢ Coupled nonlinear dynamics
 
 non_lin_mode = 7
 
@@ -73,8 +73,8 @@ State update:
 w_t = F * sin(2 w_{t-1}) + noise + B u_t
 
 Description:
-• Oscillatory nonlinear dynamics
-• Coupled through matrix F
+â€¢ Oscillatory nonlinear dynamics
+â€¢ Coupled through matrix F
 
 non_lin_mode = 8
 
@@ -82,8 +82,8 @@ State update:
 w_t = F * sigmoid(2 w_{t-1}) + noise + B u_t
 
 Description:
-• Smooth bounded nonlinearity
-• Coupled through matrix F
+â€¢ Smooth bounded nonlinearity
+â€¢ Coupled through matrix F
 
 non_lin_mode = 9
 
@@ -93,8 +93,8 @@ w_t = 0.5 * a * tanh(b * w_{t-1})
 + noise + B u_t
 
 Description:
-• Hybrid tanh + sigmoid
-• Mixed nonlinear behavior
+â€¢ Hybrid tanh + sigmoid
+â€¢ Mixed nonlinear behavior
 
 non_lin_mode = 10
 
@@ -104,8 +104,8 @@ w_t = a * tanh(b * w_{t-1})
 + noise + B u_t
 
 Description:
-• Tanh plus Gaussian bump
-• Non-monotonic dynamics
+â€¢ Tanh plus Gaussian bump
+â€¢ Non-monotonic dynamics
 
 non_lin_mode = 11
 
@@ -115,8 +115,8 @@ w_t = F * tanh(2 w_{t-1})
 + noise + B u_t
 
 Description:
-• Linear mixing + tanh + Gaussian bump
-• More expressive coupled nonlinearity
+â€¢ Linear mixing + tanh + Gaussian bump
+â€¢ More expressive coupled nonlinearity
 
 non_lin_mode = 3 (SPECIAL CASE)
 
@@ -134,10 +134,10 @@ y = [ sqrt(x^2 + y^2),
 atan2(y, x) ] + noise
 
 Description:
-• Radar-style range and bearing measurement
-• Uses Jacobians for CLRB computation
-• Strongly nonlinear both in dynamics and measurement
-• Most physically structured mode
+â€¢ Radar-style range and bearing measurement
+â€¢ Uses Jacobians for CLRB computation
+â€¢ Strongly nonlinear both in dynamics and measurement
+â€¢ Most physically structured mode
 
 #################### Evaluating the Model ###############
 See Eval_ICL_Dyn_Sys.py; You have to specify model directory along with the simulation parameters that affect the model architecture (e.g observation dimensions etc)
