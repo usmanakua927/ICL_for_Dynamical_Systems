@@ -138,3 +138,6 @@ Description:
 • Uses Jacobians for CLRB computation
 • Strongly nonlinear both in dynamics and measurement
 • Most physically structured mode
+
+#################### Evaluation the Model ###############
+See Eval_ICL_Dyn_Sys.py; You have to specify model directory along with the simulation parameters that affect the model architecture (e.g observation dimensions etc)
