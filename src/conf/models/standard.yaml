@@ -1,0 +1,5 @@
+model:
+    family: gpt2
+    n_embd: 512
+    n_layer: 32 # from 16
+    n_head: 8 # from 4
